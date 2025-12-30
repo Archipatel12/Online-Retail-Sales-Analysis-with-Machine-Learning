@@ -1,0 +1,200 @@
+🛒 Online Retail Sales Analysis with Machine Learning
+📌 Project Overview
+
+This project analyzes an online retail transaction dataset to understand sales trends, product performance, and the impact of discounts on revenue.
+The analysis follows a clear end-to-end workflow starting from raw data loading to feature engineering, visualization, basic machine learning, and AI-style insight generation.
+
+✅ All analysis and components in this repository are directly based on the code implemented in the notebook.
+
+📂 Dataset
+
+Source: Kaggle – Online Retail Dataset
+
+File Used: online_retail.csv
+
+Encoding: ISO-8859-1
+
+Type: E-commerce transactional data
+
+🔑 Main Columns Used
+
+InvoiceNo
+
+StockCode
+
+Description
+
+Quantity
+
+InvoiceDate
+
+UnitPrice
+
+CustomerID
+
+Country
+
+🛠️ Technologies Used
+
+🐍 Python
+
+🧮 Pandas
+
+🔢 NumPy
+
+📊 Matplotlib
+
+📈 Seaborn
+
+🤖 Scikit-learn
+
+📓 Jupyter Notebook
+
+🔍 Project Structure & Analysis
+1️⃣ Data Loading
+
+Loaded dataset using Pandas
+
+Displayed initial rows to understand structure
+
+2️⃣ Basic Data Understanding
+
+Checked dataset shape and data types
+
+Generated summary statistics
+
+Identified missing values
+
+3️⃣ Data Cleaning
+
+Removed rows with missing CustomerID
+
+Removed returned or invalid transactions:
+
+Quantity ≤ 0
+
+UnitPrice ≤ 0
+
+✔️ Ensured only valid purchase data was used for analysis.
+
+4️⃣ Feature Engineering
+
+The following features were created directly in the notebook:
+
+TotalSales = Quantity × UnitPrice
+
+Month extracted from InvoiceDate
+
+Quarter derived from month
+
+Discount (%) used as an input feature for prediction
+
+5️⃣ Monthly Sales Analysis
+
+Grouped data by month
+
+Calculated total sales per month
+
+Visualized monthly revenue trends using line plots
+
+Purpose
+
+Identify seasonality
+
+Understand sales fluctuations across the year
+
+6️⃣ Product-Level Analysis
+
+Aggregated sales by product description
+
+Identified top-selling products by revenue
+
+Compared product performance across quarters
+
+Purpose
+
+Highlight products contributing most to revenue
+
+Observe seasonal product behavior
+
+7️⃣ Discount Impact Analysis
+
+Used discount as a numerical feature
+
+Analyzed how price and discount interact with sales quantity
+
+Discount is treated as an input variable in the ML model
+
+Purpose
+
+Understand how discounts influence predicted sales outcomes
+
+🤖 Machine Learning Component
+📈 Sales Prediction Model
+
+Model Used: Linear Regression
+
+Library: Scikit-learn
+
+🔢 Features Used
+
+Month
+
+Quantity
+
+Unit Price
+
+Discount
+
+🎯 Target Variable
+
+TotalSales
+
+🧪 Steps Performed
+
+Feature selection from cleaned dataset
+
+Train-test split
+
+Model training
+
+Prediction on new inputs
+
+A helper function is included to predict sales based on:
+
+month, quantity, price, discount
+
+🧠 Generative AI Style Insight Output
+
+The notebook includes a GenAI-ready text generator function that:
+
+Produces readable text summaries of sales insights
+
+Converts numeric trends into human-readable observations
+
+This shows how analytical results can be transformed into natural language insights for reporting or dashboards.
+
+✅ Key Learnings
+
+Real-world retail data requires significant cleaning
+
+Time-based features are essential for sales analysis
+
+Discounts affect predicted sales outcomes when modeled numerically
+
+Simple machine learning models can provide useful business predictions
+
+Text-based insight generation improves result communication
+
+🚀 How to Run
+1️⃣ Install required libraries
+pip install pandas numpy matplotlib seaborn scikit-learn
+
+2️⃣ Open the notebook
+jupyter notebook sales_analysis.ipynb
+
+3️⃣ Run cells sequentially
+
+👤 Author
+Archi Patel
+Data Analysis | Machine Learning | Python
